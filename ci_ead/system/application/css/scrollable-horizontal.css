@@ -1,0 +1,29 @@
+.scrollable {
+	BORDER-BOTTOM: #ccc 1px solid;
+	POSITION: relative;
+	BORDER-LEFT: #ccc 1px solid;
+	WIDTH: 900px;
+	BACKGROUND: url(/img/global/gradient/h300.png) repeat-x;
+	HEIGHT: 160px;
+	OVERFLOW: hidden;
+	BORDER-TOP: #ccc 1px solid;
+	BORDER-RIGHT: #ccc 1px solid
+}
+.scrollable .items {
+	POSITION: absolute;
+	WIDTH: 20000em;
+	CLEAR: both;
+	height: 160px;
+}
+.items DIV {
+	WIDTH: 148px;
+	FLOAT: left;
+	margin-left:1px;
+	margin-right:1px;
+}
+.scrollable IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #fff; MARGIN: 20px 5px 20px 21px; PADDING-LEFT: 2px; WIDTH: 100px; PADDING-RIGHT: 2px; FLOAT: left; HEIGHT: 75px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 2px; -moz-border-radius: 4px; -webkit-border-radius: 4px
+}
+.scrollable .active {
+	BORDER-BOTTOM: #000 2px solid; POSITION: relative; BORDER-LEFT: #000 2px solid; BORDER-TOP: #000 2px solid; CURSOR: default; BORDER-RIGHT: #000 2px solid
+}

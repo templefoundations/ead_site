@@ -1,0 +1,639 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	background-color:#FFFFFF;
+	margin:0px;
+	text-align:inherit;
+}
+button, a.button {
+/* text */
+	text-decoration: 		none;
+	font-size: 				14px;
+	font-weight:			bold;
+	text-shadow: 			rgba(255,255,255,.5) 0 1px 0;
+	-webkit-user-select: 	none;
+	-moz-user-select: 		none;
+	user-select: 			none;
+/* layout */
+	padding: 				.5em .6em .4em .6em;
+	margin: 				.5em;
+	display: 				inline-block;
+	position: 				relative;
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 	8px;
+/* effects */
+	border-top: 		1px solid rgba(255,255,255,0.8);
+	border-bottom: 		1px solid rgba(0,0,0,0.1);
+	
+	background-image: 	-webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url(../images/noise.png);
+	background-image: 	-moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%), url(../images/noise.png);
+	background-image: 	gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url(../images/noise.png);
+
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: 	background .2s ease-in-out;
+	transition: 		background .2s ease-in-out;
+/* color */	
+	color: 				hsl(88, 70%, 30%) !important;
+	background-color: 	hsl(88, 70%, 60%);
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+ /*color 
+	color: 				hsl(0, 0%, 40%) !important;
+	background-color: 	hsl(0, 0%, 75%);
+	
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em,  inner shadow  
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px,  color border 
+						rgba(0,0,0,0.2) 0 .5em 5px;  drop shadow 
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em,  inner shadow  
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px,  color border 
+						rgba(0,0,0,0.2) 0 .5em 5px;  drop shadow 
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em,  inner shadow  
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px,  color border 
+						rgba(0,0,0,0.2) 0 .5em 5px;  drop shadow 
+	
+	color:#74a035; background:url(../images/menu_a.gif) repeat-x top; border-radus:4px; -moz-border-radius:4px; -webkit-border-radius:4px;
+	font-family:"Segoe UI";
+	font-weight:bold;
+	height:31px;
+	background-color:#e4f3cc;
+	border:1px #090 solid;
+	color:#063;
+	font-weight:bold;
+	padding:2px;
+*/}
+button:hover {
+	cursor: pointer;
+	background-color: hsl(88, 70%, 75%);
+}
+a.button {
+	border: 0;
+	font-size: 14px;
+}
+
+button.disabled {
+	color: hsl(0, 0%, 40%) !important;
+	background-color: hsl(0, 0%, 75%);
+	cursor: default;
+	border:0;
+}
+a:link {
+	color: #0383f8;
+	text-decoration:none;
+}
+a:visited {
+	color: #0383f8;
+}
+a:hover {
+	color: #66aa00;
+	text-decoration:underline;
+}
+a:active {
+	color: #0383f8;
+	text-decoration:none;
+}
+
+/*select, textarea {
+	width:250px;
+} */
+
+textarea, select, input.textbox, input.file {
+	width:250px;
+	border:1px #666 solid;
+	padding: .4em;
+}
+textarea {
+	height: 70px;
+}
+input.file {
+	width: 350px;
+}
+input.small {
+	width: 100px;
+}
+
+td, th {
+	text-align: left;
+	font-size: 14px;
+}
+
+h2 {
+	font-size:18px;
+	color:#060;
+	font-weight:normal;
+	margin:0px 0 10px 0;
+	padding:20px 0 5px 0;
+	border-bottom:1px dotted #ccc;
+}
+h3 {
+	font-size:14px;
+	margin:0 0 10px 0px;
+	font-weight:normal;
+	color:#666;
+}
+h4 {
+	font-weight:bold;
+	font-size:12px;
+	margin:0 0 10px 0;
+	color:#000;
+}
+
+p {
+	color: #555;
+	text-indent: 0px;
+	font-size: 14px;
+}
+
+caption {
+	text-align:left;
+	text-decoration:underline;
+	font-weight:bold;
+}
+.error { color:#f00; }
+.first_col { min-width:20%; width:25%; }
+.rounded { 
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 	8px; 
+}
+.active_box, .passive_box, .white_box {
+	border: 1px #CCC solid;
+	padding: 4px;
+	margin-bottom: 15px;
+}
+.active_box {
+	background-color: #F5FFEC;
+}
+.passive_box {
+	background-color: #FFF2FF;
+}
+.white_box {
+	background-color: #FFF;
+}
+
+#footer_links {
+	height: 30px;
+}
+#footer_links a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#list_tbl {
+	font-size: 14px;
+}
+#list_tbl tr:HOVER {
+	background-color: #F4FFEA;
+}
+#list_tbl a {
+	font-size: 14px;
+}
+#tbl_head {
+	text-align: left;
+	background-color: #F4FFEA;
+	height: 30px;
+}
+#tbl_head th {
+	padding: 5px;
+	color: #060;
+}
+
+.main { padding:0; margin:0; background-color:#fff;}
+.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+.clear{ clear:both; }
+
+#header {
+	background:url(../images/header_bg.gif) repeat-x top;
+	color:#5f5f5f;
+}
+#header h1 {
+	margin:0px;
+	margin-top:-32px;
+	/*margin:0px 0 0 0;
+	*/padding:24px 0;
+	color:#c1c1c1;
+	font:bold 22px/1.2em Arial, Helvetica, sans-serif;
+	text-transform:none;
+}
+#header h1 a, #header h1 a:hover { color:#777; text-decoration:none;}
+#header h1 span { color:#ffa800; font-size:40px;}
+#header h1 small { font:normal 13px/1.2em Arial, Helvetica, sans-serif;}
+#header h1 sup { color:#ffa800; font-size:12px; margin-top:-10px; }
+#header h2 { font:bold 24px Arial, Helvetica, sans-serif; color:#a3ce67; padding:8px 0; margin:8px 0;}
+#header p { margin:8px 0; padding:0 0 8px 0; font:normal 12px/1.8em Arial, Helvetica, sans-serif;}
+#header a { color:#5e8525; text-decoration:underline;}
+#header .header_resize { margin:0px auto; padding:0 0 0 40px; width:930px;}
+#header .logo { width:auto; float:left;}
+
+/* menu */
+#header .menu_nav { float:right; width:653px; height:46px; background:url(../images/menu_bg.jpg) no-repeat center top;}
+#header .menu_nav ul { margin:0; padding:6px 92px; list-style:none;}
+#header .menu_nav ul li { margin:0 4px; float:left;}
+#header .menu_nav ul li a { display:block; margin:0; padding:7px 12px 6px; color:#fff; text-decoration:none; font-weight:bold;}
+#header .menu_nav ul li a:hover, #header .menu_nav ul li.active a { color:#74a035; background:url(../images/menu_a.gif) repeat-x top; border-radus:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+/* hbg */
+.hbg { 
+	height:170px; background:url(../images/hbg_bg.gif) repeat-x top; overflow:hidden; color:#fff;
+	
+}
+.hbg_resize { margin:0 auto; padding:0 40px; width:890px;}
+.hbg img.hbgimg { margin-right:70px; padding:16px 0 0 0; float:left;}
+.hbg img.readmore { float:right; padding-top:32px;}
+.hbg h2 { padding-top:16px; color:#fff;}
+
+#body {
+	width:90%;
+	padding-left:20px;
+	padding-right:20px;
+}
+#thin_body {
+	width:1000px;
+	margin:0 auto;
+	min-height:600px;
+	margin-bottom: 20px;
+}
+#mainbar {
+	float: left;
+	width: 67%;
+	height: 100%;
+	margin-bottom: 20px;
+	min-height: 500px;
+	padding-right: 20px;
+	border-right: 1px #CCC solid;
+}
+#sidebar {
+	margin: 0;
+	margin-bottom: 20px;
+	height: 100%;
+	float: right;
+	width: 30%;
+	min-height: 500px;
+}
+
+#page_nav {
+	padding:10px;
+}
+#page_nav #page {
+	background-color:#F4FFEA;
+	border:1px #80FF00 solid;
+	padding:3px;
+	margin:3px;
+	cursor:pointer;
+}
+#page_nav #page.active {
+	color:#FC0;
+	font-weight:bold;
+	border:1px #FC0 solid;
+}
+
+#footer{
+	width:100%;
+	background:#f1f1f1;
+	border-top:1px solid #ccc;
+	padding:20px 0 20px 0;
+	text-align:center;
+	margin-top: 20px;
+}
+#innerfoot{
+	width:1000px;
+	margin:0 auto;
+	color:#666;
+	text-indent:20px;
+	text-align:left;
+	height: 200px;
+}
+
+#search {
+	height:170px;
+	width:1000px;
+	margin:0 auto;
+	padding-top:10px;
+}
+#search td {
+	font-size:16px;
+	color: #060;
+}
+
+#featured_colleges {
+	padding-bottom:20px;
+	height: 200px;
+}
+
+#categories {
+	padding-bottom:20px;
+}
+
+#adm_form {
+	color:#000;
+}
+
+#adm_form h2, #adm_form h3 {
+	text-align:center;
+}
+
+#form_details {
+	margin-bottom:20px;
+}
+
+#form_section {
+}
+#form_section caption {
+	font-size:14px;
+	margin:0 0 10px 0px;
+	font-weight:normal;
+	color:#666;
+}
+#form_section table {
+	border:1px solid #000;
+	border:1px #CCC solid;
+	padding:10px;
+	margin-bottom:20px;
+}
+
+#bill {
+	color:#000;
+	margin-bottom:20px;
+	font-size: 12px;
+}
+
+#bill table {
+	margin-bottom:10px;
+}
+
+#bill hr {
+	color:#ccc;
+	height:1px;
+}
+
+#bill strong {
+	font-size:14px;
+	font-weight:bold;
+}
+
+.highlight_text {
+	color:#F93;
+}
+.info {
+	color:#666;
+}
+
+
+/* ADMIN  */
+
+#course_item_active, #course_item_passive, #course_item_to_open, #course_item_closed {
+	margin-bottom:20px;
+	padding:3px;
+}
+
+#course_item_active {
+	border:1px #ccc solid;
+	background-color:#F5FEF3;
+}
+#course_item_active .course_name {
+	color:#006600;
+	font-size:20px;
+}
+#course_item_active .status_spec {
+	color:#666666;
+	padding-left:50px;
+	font-size:14px;
+}
+#course_item_active .highlight {
+	font-size:16px;
+	padding-left:20px;
+	color:#666666;
+}
+#course_item_active .highlight b {
+	color:#FF6600;
+}
+
+#course_item_passive, #course_item_to_open {
+	border:1px #ccc solid;
+	background-color:#FFF2F2;
+}
+#course_item_passive .course_name, #course_item_to_open .course_name {
+	color:#FF0000;
+	font-size:20px;
+}
+#course_item_passive .status_spec, #course_item_to_open .status_spec {
+	color:#666666;
+	padding-left:50px;
+	font-size:14px;
+}
+#course_item_passive .highlight, #course_item_to_open .highlight {
+	font-size:16px;
+	padding-left:20px;
+	color:#666666;
+}
+#course_item_passive .highlight b, #course_item_to_open .highlight b {
+	color:#FF6600;
+}
+
+#course_item_closed {
+	border:1px #ccc solid;
+	background-color:#FFFFDD;
+}
+#course_item_closed .course_name {
+	color:#808040;
+	font-size:20px;
+}
+#course_item_closed .status_spec {
+	color:#666666;
+	padding-left:50px;
+	font-size:14px;
+}
+#course_item_closed .highlight {
+	font-size:16px;
+	padding-left:20px;
+	color:#666666;
+}
+#course_item_closed .highlight b {
+	color:#FF6600;
+}
+
+/*  ADMIN - COURSE PAGE  */
+#course_heading h1 {
+	color:#060;
+}
+#course_heading .desc {
+	color:#666;
+	margin-left:10%;
+}
+#tabs {
+	height:35px;
+	padding-bottom:10px;
+	padding-top: 20px;
+}
+#tabs ul {
+	margin:0;
+	font-size:13px;
+	font-weight:bold;
+	border-bottom:1px #666 solid;
+	height:30px;
+}
+#tabs li {
+	border:1px #666 solid;
+	border-bottom:0;
+	margin-right:15px;
+	text-align:center;
+	padding-top:10px;
+	display:inline;
+	float:left;
+	min-width: 100px;
+	max-height: 150px;
+	padding: 5px;
+}
+#tabs li.current_selection {
+	background-color:#EFFFDF;
+}
+#tabs a {
+	text-decoration:none;
+	color:#060;
+}
+
+#tab_content {
+	margin-bottom:20px;
+}
+#tab_content #filters {
+	float:left;
+	border-right:1px #999 solid;
+	height:1000px;
+	width: 250px;
+}
+#tab_content #filters h2 {
+	margin:0;
+}
+#tab_content #filters .desc {
+	color:#999;
+	margin-left:10%;
+	padding-bottom:20px;
+}
+#tab_content #filters td {
+	margin:0;
+	border-bottom:1px #CCC solid;
+	padding:13px;
+}
+#tab_content #filters #heading {
+	font-weight:bold;
+	font-size:14px;
+}
+#tab_content #filters #content {
+	margin:5px;
+	padding-left:5px;
+}
+
+#tab_content #candidates {
+	float:left;
+	width:70%;
+	padding:15px;
+	margin-bottom:20px;
+}
+#tab_content #candidates #candidate {
+	border:1px #CCC solid;
+	padding:5px;
+	margin-bottom:20px;
+}
+#tab_content #candidates #candidate a {
+	font-size:14px;
+	text-decoration:none;
+}
+
+#manage_tab {
+	margin-bottom:20px;
+}
+#manage_tab h2 {
+	text-align:left;
+}
+#manage_tab td {
+	padding:10px;
+}
+#manage_tab button {
+	margin-right:20px;
+}
+/*  END ADMIN - COURSE PAGE  */
+
+/*  CANDIDATE PAGE */
+#controls {
+	padding-left:20px;
+	padding-right:20px;
+	margin-bottom:10px;
+}
+#controls a {
+	padding-right:50px;
+	font-size:14px;
+	font-weight:bold;
+}
+#print_body {
+	width:1000px;
+	margin-bottom:20px;
+}
+#print_body table {
+	width:90%;
+}
+#print_body caption {
+	text-align:left;
+	text-decoration:underline;
+	font-weight:bold;
+}
+/*  END CANDIDATE PAGE */
+
+/* ADMIN MESSAGES */
+#messages_header {
+	margin-bottom:20px;	
+}
+#messages {
+	margin-bottom:20px;	
+}
+#messages th {
+	border:1px #090 solid;
+	color:#093;
+	background-color:#e4f3cc;
+}
+#messages td {
+	border:1px #999 solid;
+}
+
+/* COLLEGE & COURSE PAGES */
+#coll_info {
+	border:1px #CCC solid;
+	margin:5px;
+	padding:10px;
+	margin-bottom:20px;
+}
+#coll_info td {
+	padding:5px;
+}
+#desc {
+	margin-bottom:20px;
+}
+#courses {
+	padding-bottom:20px;
+}
+#courses a {
+	font-size:14px;
+}
+#courses td {
+	border-bottom:1px #999 solid;
+	padding:5px;
+}
+
+#login {
+	border:1px #CCC solid;
+	padding:10px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+#login td {
+	font-size:16px;
+	color: #060;
+}
