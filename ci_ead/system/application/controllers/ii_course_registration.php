@@ -151,7 +151,9 @@ class Ii_course_registration extends Controller
 		$this->db->select('tbl_course.course_id')->from('tbl_course');
 		$this->db->join('tbl_inst_course', 'tbl_course.course_id=tbl_inst_course.course_id');
 		$this->db->where('inst_id', $this->session->userdata('inst_id'));
-		$this->db->where_not_in('tbl_course.course_id', $reg_course_ids);
+		if (!empty($reg_course_ids)) {
+			$this->db->where_not_in('tbl_course.course_id', $reg_course_ids);
+		}
 		$query = $this->db->get();
 		$possible_courses = array();
 		foreach ($query->result() as $row)
